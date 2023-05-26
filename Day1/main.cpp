@@ -6,41 +6,40 @@
 using namespace std;
 
 int main() {
+        //opening file
         ifstream file;
         file.open("calories.txt");
+        //check if file was opened
         if(file.fail()){
             cout << "File failed to open." << endl;
             return 1;
             }
-        vector <int> all_elfs;
+        //int for storing highest number
         int max_calories {0};
+        //int for storing sum for elfs
         int calories {0};
-        int elf_number {1};
-        int max_elf {1};
+        //buffer for string
         string line;
+        //file line loop
         while(!file.eof()){
-            
+            //get line from file
             getline(file, line);
+            //find empty space in file = end of sum
             if(line.empty()){
-                all_elfs.push_back(calories);
-                elf_number++;
+                //compare sum with currently stored highest number
                 if(max_calories < calories){
                     max_calories = calories;
-                    max_elf = elf_number;
                     }
+                //prepare calories for another sum
                 calories = 0;
             }else{
+                //calories sum
                 calories = calories + stoi(line);
             }
-            
         }
-        
-        cout << all_elfs.at(0) << endl;
-        cout << all_elfs.at(1) << endl;
-        cout << all_elfs.at(all_elfs.size()-2) << endl;
+        //print the highest calorie ammount
         cout << max_calories << endl;
-        cout << max_elf << endl;
-        
-       
+        //close file
+        file.close();
         return 0;
 }

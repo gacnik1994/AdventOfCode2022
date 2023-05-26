@@ -8,7 +8,7 @@ using namespace std;
 int main() {
         //opening file
         ifstream file;
-        file.open("calories.txt");
+        file.open("input.txt");
         //check if file was opened
         if(file.fail()){
             cout << "File failed to open." << endl;

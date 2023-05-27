@@ -13,7 +13,10 @@ int main() {
         }
         string line;
         int count {0};
+        int all_overlaping {0};
+        int no_of_loops {0};
         while(!file.eof()){
+            no_of_loops++;
             getline(file, line);
             int sections[2][2] {0};
             int line_length = line.length(); 
@@ -50,11 +53,16 @@ int main() {
                     if((sections[0][0] >= sections[1][0] && sections[0][1] <= sections[1][1]) || (sections[1][0] >= sections[0][0] && sections[1][1] <= sections[0][1])){
                         count++;
                     }
-                    
+                    if(sections[0][1] < sections[1][0] || sections[1][1] < sections[0][0] ){
+                        all_overlaping++;
+                    }
                 }
+                    
+                
             }   
         }
         
         cout << count << endl;
+        cout << no_of_loops-all_overlaping << endl;
         return 0;
 }

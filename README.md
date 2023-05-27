@@ -1,6 +1,10 @@
-|       | Advent of code 2022 Results|         |
-|-------|----------------------------|---------|
-|Day1	| The highest calorie SUM    |	 68442 |
-|Day2	| Total points is 	     |	 10595 |
-|Day3	| Sum of priorities	     |	  8233 |
-|Day4	| Fully contained ranges     |     538 |
+Advent of code 2022
+********************************************
+
+
+| Day No.| Answer 1 | Answer 2 |
+|--------|---------------------|
+| 1	 | 68442    |	       |
+| 2	 | 10595    |	       |
+| 3	 | 8233	    |	       |
+| 4	 | 538      |     792  |
